@@ -31,30 +31,27 @@ export default function People() {
 
     return (
         <div className="people">
-            <section>
-                <h2>Search for a Person</h2>
+            <section >
+                <h2 className='mb-3 text-center'>SEARCH FOR A PERSON</h2>
                 <form onSubmit={handleSearch}>
                     <input
                     value={search}
                     onChange={(event) => setSearch(event.target.value)}
                     required
                     />
-                    <button>Search</button>
+                    <button className='btn btn-outline-dark btn-sm'><span>SUBMIT</span></button>
                 </form>
             </section>
 
             {personName === 0 ? (
                 <p className="not-found">Not Found</p>
                 ) : personName ? (
-                <aside>
-                    <h3>Name: {personName.name}</h3>
-                    <span>Age:</span> {personName.age}
-                    <br />
-                    <span>Gender:</span> {personName.gender}
-                    <br />
-                    <span>Eye Color:</span> {personName.eye_color}
-                    <br />
-                    <span>Hair Color:</span> {personName.hair_color}
+                <aside className='text-center'>
+                    <h3 className="m-5">Name: {personName.name}</h3>
+                    <p><span>Age:</span> {personName.age}</p>
+                    <p><span>Gender:</span> {personName.gender}</p>
+                    <p><span>Eye Color:</span> {personName.eye_color}</p>
+                    <p><span>Hair Color:</span> {personName.hair_color}</p>
                 </aside>
                 ) : null}
         </div>

@@ -7,9 +7,8 @@ export default function LocationCard({allLocations}) {
                         <li key={id}>
                             <ul>
                                 <li><strong>Name: </strong>{name}</li>
-                                <li>
-                                Climate: {climate}</li>
-                                <li>Terrain: {terrain}</li>
+                                <li> <strong>Climate: </strong> {climate}</li>
+                                <li><strong>Terrain: </strong> {terrain}</li>
                             </ul>
                         </li>
                     );
